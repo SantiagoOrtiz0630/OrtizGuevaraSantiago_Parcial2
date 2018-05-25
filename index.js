@@ -1,13 +1,23 @@
 const express = require('express'),
-engines = require('consolidate');
+    engines = require('consolidate');
 const path = require('path');
 const hbs = require('express-handlebars');
 const fs = require('fs');
 
 var app = express(),
-db;
+    db;
 
-//middlewares
+var Inicio = 0;
+var Holi = 0;
+var Otro = 0;
+
+var texto = fs.readFileSync('contadores.txt', 'utf8');
+
+function escribirTXT() {
+    var nwTXT;
+    nwTXT = "[Inicio: " + Inicio + ", Holi: " + Holi + ", Otro: " + Otro + "]";
+    fs.writeFileSync('contadores.txt', nwTXT);
+}
 
 app.use(express.static('public'));
 
@@ -23,17 +33,29 @@ app.set('view engine', 'hbs');
 
 //rutas
 app.get('/', (req, res) => {
-    res.render('index', {titulo: 'Hola'});
+    Inicio += 1;
+    escribirTXT();
+    res.render('index', {
+        titulo: 'Hola'
+    });
 });
 
 //rutas
 app.get('/Otro', (req, res) => {
-    res.render('Otro', {titulo: 'Hola'});
+    Otro += 1;
+    escribirTXT();
+    res.render('Otro', {
+        titulo: 'Hola'
+    });
 });
 
 //rutas
 app.get('/Holi', (req, res) => {
-    res.render('Holi', {titulo: 'Hola'});
+    Holi += 1;
+    escribirTXT();
+    res.render('Holi', {
+        titulo: 'Hola'
+    });
 });
 
 app.listen(3000);

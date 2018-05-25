@@ -1,5 +1,1 @@
-{
- "Inicio": 0,
- "Otro": 0,
- "Holi": 0    
-}
+[Inicio: 2, Holi: 3, Otro: 3]

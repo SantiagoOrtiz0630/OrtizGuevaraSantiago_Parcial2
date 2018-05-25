@@ -1,5 +1,5 @@
 {
-  "name": "parcial",
+  "name": "OrtizGuevaraSantiago_Parcial2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,5 +14,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantiagoOrtiz0630/OrtizGuevaraSantiago_Parcial2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SantiagoOrtiz0630/OrtizGuevaraSantiago_Parcial2/issues"
+  },
+  "homepage": "https://github.com/SantiagoOrtiz0630/OrtizGuevaraSantiago_Parcial2#readme"
 }
