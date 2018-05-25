@@ -2,6 +2,7 @@ const express = require('express'),
 engines = require('consolidate');
 const path = require('path');
 const hbs = require('express-handlebars');
+const fs = require('fs');
 
 var app = express(),
 db;
